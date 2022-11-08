@@ -5,7 +5,7 @@ import can
 
 bus = can.interface.Bus(channel='can0', bustype='socketcan_native')
 
-connection_string = "udp:127.0.0.1:14550"
+connection_string = "/dev/ttyACM0,115200"
 
 print("\nConnecting to vehicle on: %s" % connection_string)
 vehicle = connect(connection_string, wait_ready=True)
