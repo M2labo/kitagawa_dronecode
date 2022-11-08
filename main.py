@@ -43,7 +43,7 @@ while True:
     bus.send(msgF1)
 
     # # # システム状態
-    msgF2 = can.Message(arbitration_id=0xF1, data=[mode, int(vehicle.gps_0.fix_type), 255, 255], extended_id=False)
+    msgF2 = can.Message(arbitration_id=0xF2, data=[mode, int(vehicle.gps_0.fix_type), 255, 255], extended_id=False)
     bus.send(msgF2)
 
     # # 北大からの司令
